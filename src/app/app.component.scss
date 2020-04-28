@@ -1,0 +1,44 @@
+
+
+  mat-toolbar {
+    background-color: white;
+    position: relative;
+    display: flex;
+
+  }
+
+
+  
+  .menu-spacer {
+      flex: 1 1 auto;
+    }
+    
+    mat-nav-list {
+      a {
+        mat-icon {
+          padding-right: 5px;
+        }
+      }
+    }
+    
+    .active-link{
+      color: #0E9BAF;
+      }
+    
+      img {
+        width: 150px; 
+        height: 50px;
+      }
+    
+      a :hover {
+        text-decoration: none;
+        color: #0E9BAF;
+      }
+    
+    
+      @media screen and (max-width: 400px) {
+        // img {
+        //   width: 110px; 
+        //   height: 50px;
+        // }
+      }
