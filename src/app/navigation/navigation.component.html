@@ -1,0 +1,111 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [ngClass]="{'hidden': !(isHandset$ | async)}"
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <!-- <mat-toolbar>Menu</mat-toolbar> -->
+    <mat-nav-list>
+      <a routerLink="/layouts/home" mat-list-item routerLinkActive="active-link">
+        <mat-icon aria-hidden="false" aria-label="Fast Smart home">home</mat-icon>
+        Acceuil
+      </a>
+      <a routerLink="/layouts/service" mat-list-item routerLinkActive="active-link">
+        <mat-icon aria-hidden="false" aria-label="Fast Smart panier category">apps</mat-icon>
+        Services
+      </a>
+      <a routerLink="/layouts/presentation" mat-list-item routerLinkActive="active-link">
+        <mat-icon aria-hidden="false" aria-label=" Fast Smart contactez nous">send</mat-icon>
+        Présentations
+      </a>
+      <a routerLink="/layouts/about" mat-list-item routerLinkActive="active-link">
+        <mat-icon aria-hidden="false" aria-label=" Fast Smart contactez nous">send</mat-icon>
+        A Propos de Nous
+      </a>
+      <a routerLink="/layouts/contact" mat-list-item routerLinkActive="active-link">
+        <mat-icon aria-hidden="false" aria-label=" Fast Smart contactez nous">send</mat-icon>
+        Contactez-Nous
+      </a>
+      <span >
+        <a routerLink="/admin" mat-list-item matTooltip="Admin" routerLinkActive="active-link">
+        <mat-icon aria-hidden="false" aria-label="Fast Smart Admin">settings</mat-icon>
+        Admin 
+      </a>
+    </span>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar id="toolbar" class="mat-elevation-z8">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <a routerLink="/fastsmart/layouts" mat-button matTooltip="Fast Smart">
+        <img src="/assets/img/logo.png" alt="logo fast smart">
+      </a>
+
+      <span class="menu-spacer"></span>
+      <div fxShow="true" fxHide.lt-md>
+        <span >
+          <a routerLink="/admin" mat-button matTooltip="Admin" routerLinkActive="active-link">
+          <mat-icon aria-hidden="false" aria-label="Fast Smart Admin">settings</mat-icon>
+        </a>
+      </span>
+
+        <a routerLink="/layouts/home" class="nav-1"  mat-button matTooltip="Acceuil" routerLinkActive="active-link">
+
+          Acceuil
+        </a> 
+        <a routerLink="/layouts/about" class="nav-1" mat-button matTooltip="About" routerLinkActive="active-link">
+
+          A Propos de Nous
+        </a> 
+        <a routerLink="/layouts/service" class="nav-1" mat-button matTooltip="Nos Services" routerLinkActive="active-link">
+
+          Services
+        </a>
+        <a routerLink="/layouts/presentation" class="nav-1" mat-button matTooltip="Nos Présentations" routerLinkActive="active-link">
+
+          Présentations
+        </a>
+        <a routerLink="/layouts/contact" class="nav-1" mat-button matTooltip="Contactez Nous ici" routerLinkActive="active-link">
+
+          Contactez-Nous
+        </a>
+      </div>
+
+      <div fxShow="false" fxHide.lt-md>
+
+        <button mat-button [matMenuTriggerFor]="menu" matTooltip="Menu Authentification">
+          <mat-icon aria-hidden="false" aria-label="Fast Smart profile">person</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item routerLink="/layouts/profile" routerLinkActive="active-link">
+            <mat-icon aria-hidden="false" aria-label="login website">account_circle</mat-icon>
+            Profile
+          </button>
+          <button mat-menu-item routerLinkActive="active-link" >
+            <mat-icon aria-hidden="false" aria-label="déconnexion">exit_to_app</mat-icon>
+            Déconnexion
+          </button>
+          <button mat-menu-item routerLink="/auth/login" routerLinkActive="active-link">
+            <mat-icon aria-hidden="false" aria-label="login website">portrait</mat-icon>
+            Login
+          </button>
+          <button mat-menu-item routerLink="/auth/register" routerLinkActive="active-link">
+            <mat-icon aria-hidden="false" aria-label="déconnexion">person_add</mat-icon>
+            Créez un compte
+          </button>
+        </mat-menu>
+        
+      </div>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,83 +1,105 @@
-<mat-toolbar class="mat-elevation-z8">
-  <mat-toolbar-row >
-    <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
-      <mat-icon>menu</mat-icon>
-    </button>
-    <a routerLink="/fastsmart/layouts" mat-button matTooltip="Fast Smart">
-      <img src="../assets/img/logo.png" alt="logo fast smart">
-    </a>
-    <span class="menu-spacer"></span>
-    <div fxShow="true" fxHide.lt-md>
-      <span >
-        <a routerLink="/admin" mat-button matTooltip="Admin" routerLinkActive="active-link">
-         <mat-icon aria-hidden="false" aria-label="Fast Smart Admin">settings</mat-icon>
-       </a>
-     </span>
-      <!-- The following menu items will be hidden on both SM and XS screen sizes -->
-      <a routerLink="/fastsmart/layouts/home" mat-button matTooltip="Acceuil" routerLinkActive="active-link">
-        <mat-icon aria-hidden="false" aria-label="Fast Smart acceuil">home</mat-icon>
-      </a> 
-      <a routerLink="/fastsmart/layouts/category" mat-button matTooltip="Categories" routerLinkActive="active-link">
-        <mat-icon aria-hidden="false" aria-label="Fast Smart categories">apps</mat-icon>
-      </a>
-      <a routerLink="/fastsmart/layouts/contact" mat-button matTooltip="Contactez Nous ici" routerLinkActive="active-link">
-        <mat-icon aria-hidden="false" aria-label="Fast Smart contact">send</mat-icon>
-      </a>
-    </div>
-    <div class="auth_cart">
-
-      <button mat-button [matMenuTriggerFor]="menu" matTooltip="Menu Authentification">
-        <mat-icon aria-hidden="false" aria-label="Fast Smart profile">person</mat-icon>
+<div>
+  <mat-toolbar class="mat-elevation-z8">
+    <mat-toolbar-row>
+      <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
+        <mat-icon>menu</mat-icon>
       </button>
-      <mat-menu #menu="matMenu">
-        <button mat-menu-item routerLink="/fastsmart/layouts/profile" routerLinkActive="active-link">
-          <mat-icon aria-hidden="false" aria-label="login website">account_circle</mat-icon>
-          Profile
-        </button>
-        <button mat-menu-item routerLinkActive="active-link" >
-          <mat-icon aria-hidden="false" aria-label="déconnexion">exit_to_app</mat-icon>
-          Déconnexion
-        </button>
-        <button mat-menu-item routerLink="/fastsmart/auth/login" routerLinkActive="active-link">
-          <mat-icon aria-hidden="false" aria-label="login website">portrait</mat-icon>
-          Login
-        </button>
-        <button mat-menu-item routerLink="/fastsmart/auth/register" routerLinkActive="active-link">
-          <mat-icon aria-hidden="false" aria-label="déconnexion">person_add</mat-icon>
-          Créez un compte
-        </button>
-      </mat-menu>
-    </div>
-  </mat-toolbar-row>
-</mat-toolbar>
+      <a routerLink="/layouts" mat-button matTooltip="Fast Smart">
+        <img src="../assets/img/logo.png" alt="logo fast smart">
+      </a>
+      <span class="menu-spacer"></span>
+      <div fxShow="true" fxHide.lt-md>
+        <span >
+          <a routerLink="/admin" mat-button matTooltip="Admin" routerLinkActive="active-link">
+          <mat-icon aria-hidden="false" aria-label="Fast Smart Admin">settings</mat-icon>
+        </a>
+      </span>
 
-<mat-sidenav-container fxFlexFill>
-  <mat-sidenav #sidenav (click)="sidenav.close()">
-    <mat-nav-list>
-      <a routerLink="/fastsmart/layouts/home" mat-list-item routerLinkActive="active-link">
-        <mat-icon aria-hidden="false" aria-label="Fast Smart home">home</mat-icon>
-        Acceuil
-      </a>
-      <a routerLink="/fastsmart/layouts/category" mat-list-item routerLinkActive="active-link">
-        <mat-icon aria-hidden="false" aria-label="Fast Smart panier category">apps</mat-icon>
-        Categories
-      </a>
-      <a routerLink="/fastsmart/layouts/contact" mat-list-item routerLinkActive="active-link">
-        <mat-icon aria-hidden="false" aria-label=" Fast Smart contactez nous">send</mat-icon>
-        Contact
-      </a>
-      <span >
-        <a routerLink="/admin" mat-list-item matTooltip="Admin" routerLinkActive="active-link">
-         <mat-icon aria-hidden="false" aria-label="Fast Smart Admin">settings</mat-icon>
-         Admin 
-       </a>
-     </span>
-    </mat-nav-list>
-  </mat-sidenav>
-  <mat-sidenav-content fxFlexFill>
-    <router-outlet></router-outlet>
-    <!-- <app-footer></app-footer> -->
-  </mat-sidenav-content>
-</mat-sidenav-container>
+        <a routerLink="/layouts/home" class="nav-1"  mat-button matTooltip="Acceuil" routerLinkActive="active-link">
 
-<router-outlet></router-outlet>
+          Acceuil
+        </a> 
+        <a routerLink="/layouts/about" class="nav-1" mat-button matTooltip="About" routerLinkActive="active-link">
+
+          A Propos de Nous
+        </a> 
+        <a routerLink="/layouts/service" class="nav-1" mat-button matTooltip="Nos Services" routerLinkActive="active-link">
+
+          Services
+        </a>
+        <a routerLink="/layouts/presentation" class="nav-1" mat-button matTooltip="Nos Présentations" routerLinkActive="active-link">
+
+          Présentations
+        </a>
+        <a routerLink="/layouts/contact" class="nav-1" mat-button matTooltip="Contactez Nous ici" routerLinkActive="active-link">
+
+          Contactez-Nous
+        </a>
+      </div>
+      <div class="auth_cart" >
+        <button mat-button [matMenuTriggerFor]="menu" matTooltip="Menu Authentification">
+          <mat-icon aria-hidden="false" aria-label="Fast Smart profile">person</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item routerLink="/layouts/profile" routerLinkActive="active-link">
+            <mat-icon aria-hidden="false" aria-label="login website">account_circle</mat-icon>
+            Profile
+          </button>
+          <button mat-menu-item routerLinkActive="active-link" >
+            <mat-icon aria-hidden="false" aria-label="déconnexion">exit_to_app</mat-icon>
+            Déconnexion
+          </button>
+          <button mat-menu-item routerLink="/auth/login" routerLinkActive="active-link">
+            <mat-icon aria-hidden="false" aria-label="login website">portrait</mat-icon>
+            Login
+          </button>
+          <button mat-menu-item routerLink="/auth/register" routerLinkActive="active-link">
+            <mat-icon aria-hidden="false" aria-label="déconnexion">person_add</mat-icon>
+            Créez un compte
+          </button>
+        </mat-menu>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <mat-sidenav-container fxFlexFill>
+    <mat-sidenav #sidenav (click)="sidenav.close()">
+      <mat-nav-list>
+        <a routerLink="/layouts/home" mat-list-item routerLinkActive="active-link">
+          <mat-icon aria-hidden="false" aria-label="Fast Smart home">home</mat-icon>
+          Acceuil
+        </a>
+        <a routerLink="/layouts/service" mat-list-item routerLinkActive="active-link">
+          <mat-icon aria-hidden="false" aria-label="Fast Smart panier category">apps</mat-icon>
+          Services
+        </a>
+        <a routerLink="/layouts/presentation" mat-list-item routerLinkActive="active-link">
+          <mat-icon aria-hidden="false" aria-label=" Fast Smart contactez nous">send</mat-icon>
+          Présentations
+        </a>
+        <a routerLink="/layouts/about" mat-list-item routerLinkActive="active-link">
+          <mat-icon aria-hidden="false" aria-label=" Fast Smart contactez nous">send</mat-icon>
+          A Propos de Nous
+        </a>
+        <a routerLink="/layouts/contact" mat-list-item routerLinkActive="active-link">
+          <mat-icon aria-hidden="false" aria-label=" Fast Smart contactez nous">send</mat-icon>
+          Contactez-Nous
+        </a>
+        <span >
+          <a routerLink="/admin" mat-list-item matTooltip="Admin" routerLinkActive="active-link">
+          <mat-icon aria-hidden="false" aria-label="Fast Smart Admin">settings</mat-icon>
+          Admin 
+        </a>
+      </span>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content fxFlexFill>
+      <router-outlet></router-outlet>
+      <app-footer></app-footer>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div> 
+
+
+
+<!-- <app-navigation></app-navigation> -->

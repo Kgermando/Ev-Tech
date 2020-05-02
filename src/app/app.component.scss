@@ -4,7 +4,11 @@
     background-color: white;
     position: relative;
     display: flex;
+  }
 
+  mat-toolbar-row{
+    padding: 0;
+    background-color: rgb(225, 250, 255);
   }
 
 
@@ -23,6 +27,8 @@
     
     .active-link{
       color: #0E9BAF;
+      text-decoration-line: underline;
+      padding-bottom: 5px;
       }
     
       img {
@@ -32,6 +38,10 @@
     
       a :hover {
         text-decoration: none;
+        color: #0E9BAF;
+      }
+
+      .nav-1 :hover {
         color: #0E9BAF;
       }
     

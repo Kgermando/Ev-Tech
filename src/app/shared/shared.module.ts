@@ -59,10 +59,11 @@ import { SmartDatePipe } from './pipes/smart-date.pipe';
 // Components
 import { NotFoundComponent } from './component/not-found/not-found.component';
 import { SnackbarComponent } from './component/snackbar/snackbar.component';
+import { FooterComponent } from './component/footer/footer.component';
 
 
 @NgModule({
-  declarations: [NotFoundComponent, SmartDatePipe, SnackbarComponent],
+  declarations: [NotFoundComponent, SmartDatePipe, SnackbarComponent, FooterComponent],
   imports: [
     CommonModule,
     A11yModule,
@@ -170,7 +171,8 @@ import { SnackbarComponent } from './component/snackbar/snackbar.component';
     SmartDatePipe,
 
     // Components
-    NotFoundComponent
+    NotFoundComponent,
+    FooterComponent
   ]
 })
 export class SharedModule { }

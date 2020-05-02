@@ -1,0 +1,155 @@
+
+@media screen and (max-width: 960px) {
+    .home-banner {
+
+        .site-banner {
+            background-color: rgb(7, 91, 154);
+            color: rgb(255, 255, 255);
+            font-family: "Google Sans", Roboto, sans-serif;
+            font-size: 1rem;
+            position: relative;
+            text-align: center;
+            padding: 1.25rem;
+        }
+
+        .home-img {
+            // margin-top: 1rem;
+            width: 100%;
+               height: 300px;
+               background-color: #0E9BAF;
+               padding-top: 0;
+        }
+    }
+
+    .card-home-1 {
+        padding: 20px;
+        font-family: "Google Sans", Roboto, sans-serif;
+        font-size: 1rem;
+      
+        mat-card {
+            // display: flex;
+            flex-direction: row;
+            padding-left: 1rem;
+           justify-content: center;
+
+            .card-title {
+                font-weight: 500;
+                .welcome{
+                    align-self: flex-start;
+                }
+ 
+                .title {
+                    color: rgb(7, 91, 154);
+                    font-size: 2rem; 
+                    padding-top: 0.50rem;
+                    text-align: center;
+                }
+            }
+
+            .site-banner {
+                font-family: "Google Sans", Roboto, sans-serif;
+                font-size: 1rem;
+                position: relative;
+                text-align: center;
+                padding: 1.25rem;
+            }
+
+            .btn {
+                display: flex;
+                justify-content: center;
+                button {
+                    background-color: #0E9BAF;
+                    color: whitesmoke;
+                }
+ 
+                a {
+                    color: #0E9BAF;
+                }
+            }
+        }
+    }
+
+    .card-home-2 {
+        padding: 20px;
+        font-family: "Google Sans", Roboto, sans-serif;
+        font-size: 1rem;
+
+        mat-card {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+
+            .card-text-2 {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                font-family: "Google Sans", Roboto, sans-serif;
+                font-size: 1rem;
+                position: relative;
+                text-align: center;
+                padding: 1.25rem;
+
+                mat-icon {
+                    align-self: center;
+                    margin-bottom: 1rem;
+                    color: #0E9BAF;
+                }
+                .card-text-2-1 {
+                    font-weight: 500;
+                    font-size: 1.25rem;
+                    padding-bottom: 10px;
+                }
+
+            }
+
+        }
+    }
+
+    .card-home-3 {
+        margin: 20px;
+        font-family: "Google Sans", Roboto, sans-serif;
+        font-size: 1rem;
+
+        mat-card {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            margin-bottom: 20px;
+
+            .soft {
+                height: 100%;
+                width: 100%;
+                // background-color: #0E9BAF;
+                margin: 0rem;
+            }
+             
+            .card-text-3 {
+                display: flex;
+                flex-direction: row;
+                font-weight: 500;
+                font-size: 1.5rem;
+                // text-align: center;
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+                mat-icon {
+                    align-self: flex-start;
+                    padding-right: 0.75rem;
+                    color: #0E9BAF;
+                }
+
+            }
+
+            // .sofy-text {
+
+            // }
+
+        }
+    }
+
+
+}
+
+@media screen and (min-width:960px) {}

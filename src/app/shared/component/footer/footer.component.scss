@@ -1,0 +1,115 @@
+
+.footer{ 
+    color: whitesmoke;
+    background-color: #0E9BAF;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 960px) {
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: justify;
+        align-items: center;
+        height: 9rem;
+        margin-top: 2rem;
+
+        .footer-right {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            a {
+                padding: 5px;
+                text-decoration: none;
+                color: whitesmoke;
+                cursor: pointer;
+            }
+
+            a :hover {
+                text-decoration: rgb(171, 224, 231);
+            }
+
+        }
+
+        .footer-medium {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            a {
+                padding-right: 10px;
+                text-decoration: none;
+                color: whitesmoke;
+                cursor: pointer;
+
+                img {
+                    color: white;
+                }
+
+                
+            }
+
+            a :hover {
+                text-decoration: #0E9BAF;
+            }
+        }
+
+        .footer-left {
+            p {
+                font-weight: 200;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .footer {
+        display: flex;
+        flex-direction: row;
+        height: 5rem;
+        justify-content: space-between;
+        font-weight: 200;
+
+        .footer-right {
+            justify-content: flex-start;
+
+            a {
+                padding: 5px;
+                text-decoration: none;
+                color: whitesmoke;
+                cursor: pointer;
+            }
+
+            a :hover {
+                text-decoration: rgb(171, 224, 231);
+            }
+
+        }
+
+        .footer-medium {
+            justify-content: center;
+
+            a {
+                padding-right: 10px;
+                text-decoration: none;
+                color: whitesmoke;
+                cursor: pointer;
+
+                img {
+                    color: white;
+                }
+
+                
+            }
+
+            a :hover {
+                text-decoration: #0E9BAF;
+            }
+        }
+
+        .footer-left {
+            justify-content: flex-end;
+        }
+    }
+}
