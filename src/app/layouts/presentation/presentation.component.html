@@ -1,1 +1,24 @@
-<p>presentation works!</p>
+<div class="presentation">
+
+    <div class="slider"></div>
+    <div class="banner">Visitez quelques uns de nos produits</div>
+    <div class="card-grid" fxLayout="row wrap" fxLayout-lt-sm="column" fxLayoutsGap="8%"  fxLayoutAlign="flex-start">
+
+        <ng-container *ngFor="let product of products$">
+            <mat-card class="example-card" fxFlex="0 1 calc(33.3% - 8%)" fxLlex.lt-md="0 1 calc(50% - 4%)" fxFlex.lt-sm="100%">
+ 
+                  <img mat-card-image [src]="product.productImageUrl" alt="Photo Eventdrc technology">
+                  <mat-card-content>
+                    <mat-card-title>{{ product.Title }}</mat-card-title>
+                    <p>
+                      {{ product.Description }}.
+                    </p>
+                  </mat-card-content>
+                  <mat-card-actions>
+                  <a mat-button style="width: 100%;" href="http://{{ product.url }}" target="_blank" rel="eventdr presentation">Visitez</a>
+                </mat-card-actions>
+            </mat-card>
+        </ng-container>
+
+    </div>
+</div>

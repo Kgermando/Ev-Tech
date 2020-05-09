@@ -9,8 +9,8 @@
       </a>
       <span class="menu-spacer"></span>
       <div fxShow="true" fxHide.lt-md>
-        <span >
-          <a routerLink="/admin" mat-button matTooltip="Admin" routerLinkActive="active-link">
+        <span *ngIf="authService.user$ | async as user">
+          <a routerLink="/admin" mat-button matTooltip="Admin" routerLinkActive="active-link" *ngIf="user?.roles.admin === true">
           <mat-icon aria-hidden="false" aria-label="Fast Smart Admin">settings</mat-icon>
         </a>
       </span>
@@ -31,12 +31,13 @@
 
           Présentations
         </a>
-        <a routerLink="/layouts/contact" class="nav-1" mat-button matTooltip="Contactez Nous ici" routerLinkActive="active-link">
-
-          Contactez-Nous
-        </a>
+       
       </div>
-      <div class="auth_cart" >
+      <a routerLink="/layouts/contact" id="contact" class="nav-1" mat-button matTooltip="Contactez Nous ici" routerLinkActive="active-link">
+
+        Contactez-Nous
+      </a>
+      <!-- <div class="auth_cart" >
         <button mat-button [matMenuTriggerFor]="menu" matTooltip="Menu Authentification">
           <mat-icon aria-hidden="false" aria-label="Fast Smart profile">person</mat-icon>
         </button>
@@ -58,7 +59,7 @@
             Créez un compte
           </button>
         </mat-menu>
-      </div>
+      </div> -->
     </mat-toolbar-row>
   </mat-toolbar>
 
@@ -74,19 +75,19 @@
           Services
         </a>
         <a routerLink="/layouts/presentation" mat-list-item routerLinkActive="active-link">
-          <mat-icon aria-hidden="false" aria-label=" Fast Smart contactez nous">send</mat-icon>
+          <mat-icon aria-hidden="false" aria-label=" Fast Smart contactez nous">card_membership</mat-icon>
           Présentations
         </a>
         <a routerLink="/layouts/about" mat-list-item routerLinkActive="active-link">
-          <mat-icon aria-hidden="false" aria-label=" Fast Smart contactez nous">send</mat-icon>
+          <mat-icon aria-hidden="false" aria-label=" Fast Smart contactez nous">info</mat-icon>
           A Propos de Nous
         </a>
         <a routerLink="/layouts/contact" mat-list-item routerLinkActive="active-link">
           <mat-icon aria-hidden="false" aria-label=" Fast Smart contactez nous">send</mat-icon>
           Contactez-Nous
         </a>
-        <span >
-          <a routerLink="/admin" mat-list-item matTooltip="Admin" routerLinkActive="active-link">
+        <span *ngIf="authService.user$ | async as user">
+          <a routerLink="/admin" mat-list-item matTooltip="Admin" routerLinkActive="active-link" *ngIf="user?.roles.admin === true">
           <mat-icon aria-hidden="false" aria-label="Fast Smart Admin">settings</mat-icon>
           Admin 
         </a>

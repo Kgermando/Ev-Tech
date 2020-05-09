@@ -51,10 +51,11 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 // Pipes
-import { SmartDatePipe } from './pipes/smart-date.pipe';
+import { SmartPipe } from './services/pipes/smart.pipe';
 
 // Packages
-
+import { LottieModule } from 'ngx-lottie';
+import player from 'lottie-web';
 
 // Components
 import { NotFoundComponent } from './component/not-found/not-found.component';
@@ -62,8 +63,13 @@ import { SnackbarComponent } from './component/snackbar/snackbar.component';
 import { FooterComponent } from './component/footer/footer.component';
 
 
+export function playerFactory() {
+  return player;
+}
+
+
 @NgModule({
-  declarations: [NotFoundComponent, SmartDatePipe, SnackbarComponent, FooterComponent],
+  declarations: [NotFoundComponent, SnackbarComponent, FooterComponent, SmartPipe],
   imports: [
     CommonModule,
     A11yModule,
@@ -115,6 +121,8 @@ import { FooterComponent } from './component/footer/footer.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+
+    LottieModule.forRoot({ player: playerFactory })
 
   ],
   exports: [
@@ -168,7 +176,7 @@ import { FooterComponent } from './component/footer/footer.component';
 
 
     // Pipes
-    SmartDatePipe,
+    SmartPipe,
 
     // Components
     NotFoundComponent,

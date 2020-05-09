@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: 'admin', loadChildren: () => import('../app/admin/admin.module').then(m => m.AdminModule)},
 
   { path: '', redirectTo: 'layouts', pathMatch: 'full'},
-  { path: 'not-found', component: NotFoundComponent }
+  { path: '**', component: NotFoundComponent }
 ];
 
 @NgModule({

@@ -1,0 +1,203 @@
+
+@media screen and (max-width:960px) {
+    .site-banner-contact {
+        display: none;
+    }   
+   .contact {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        .contact-1 {
+            .site-banner {
+                background-color: rgb(7, 91, 154);
+                color: rgb(255, 255, 255);
+                font-family: "Google Sans", Roboto, sans-serif;
+                font-size: 1rem;
+                position: relative;
+                text-align: center !important;;
+                padding: 1.25rem;
+            }
+            ng-lottie {
+              height: 300px;
+              width: 100%;  
+            }
+            
+        }
+
+        .contact-2 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-left: 1rem;
+            margin-right:1rem;
+            
+
+            .contact-2-1 {
+                font-weight: 600;
+                padding-top: 1rem;
+                padding-bottom: 0.50rem;
+                font-size: 1.25rem;
+            }
+            .example-form {
+                min-width: 150px;
+                max-width: 500px;
+                width: 100%;
+                padding-bottom: 3rem;
+
+                .example-full-width {
+                    width: 100%;
+                }
+
+                button {
+                    background-color: #0E9BAF;
+                    color: whitesmoke;
+                    width: 100%;
+                    text-align: center;
+                }
+
+            }
+              
+            hr {
+                max-width: 3rem;
+            }
+
+            .contact-2-2 {
+                text-align: center;
+                margin-bottom: 1rem;
+               .contact-2-2-1 {
+                    font-weight: 600;
+                    padding-top: 1rem;
+                    padding-bottom: 0.90rem;
+                    font-size: 1.25rem;
+                } 
+
+                .contact-2-2-2 {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+
+                    mat-icon {
+                        color: #0E9BAF;
+                        padding-right: 0.50rem;
+                    }
+                }
+            }
+            
+              
+        }
+
+    }    
+    
+    .contact-3 {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width:960px) {
+
+    .site-banner-contact {
+            background-color: rgb(7, 91, 154);
+            color: rgb(255, 255, 255);
+            font-family: "Google Sans", Roboto, sans-serif;
+            font-size: 1rem;
+            position: relative;
+            text-align: center !important;;
+            padding: 1.25rem;
+    }
+    .contact {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin-top: 5%;
+        margin-bottom: 10%;
+        
+
+        .contact-1 {
+            flex: 50%; 
+            .site-banner {
+                display: none;
+            }
+            ng-lottie {
+              height: 300px;
+              width: 100%;  
+            }
+            
+        }
+
+        .contact-2 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex: 50%; 
+            margin-left: 1rem;
+            margin-right:1rem;
+            
+
+            .contact-2-1 {
+                font-weight: 600;
+                padding-top: 1rem;
+                padding-bottom: 0.50rem;
+                font-size: 1.25rem;
+            }
+            .example-form {
+                min-width: 150px;
+                max-width: 500px;
+                width: 100%;
+                padding-bottom: 3rem;
+
+                .example-full-width {
+                    width: 100%;
+                }
+
+                button {
+                    background-color: #0E9BAF;
+                    color: whitesmoke;
+                    width: 100%;
+                    text-align: center;
+                }
+
+            }
+
+            hr {
+                display: none;
+            }
+
+            .contact-2-2 { 
+                display: none;
+            }
+        }
+
+    } 
+    
+    .contact-3 {
+        text-align: center;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+       .contact-3-1 {
+            font-weight: 600;
+            padding-top: 1rem;
+            padding-bottom: 0.50rem;
+            font-size: 1.25rem;
+        } 
+
+        hr {
+            max-width: 3rem;
+        }
+
+        .contact-3-2 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            mat-icon {
+                color: #0E9BAF;
+                padding-right: 0.50rem;
+            }
+        }
+    }
+
+}

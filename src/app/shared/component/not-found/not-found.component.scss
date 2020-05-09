@@ -1,0 +1,87 @@
+@media screen and (max-width:960px) {
+    .not-found {
+        ng-lottie {
+            height: 400px;
+            width: 100%;
+        }
+        .banner-404 {
+            background-color: rgb(255, 255, 255); 
+            height: 100%;
+
+            .title-404 {
+                color: rgb(7, 91, 154);
+                font-family: "Google Sans", Roboto, sans-serif;
+                font-size: 1.50rem;
+                font-weight: 800;
+                position: relative;
+                text-align: center !important;;
+                padding: 1.25rem;
+            }
+
+            .body-404 {
+                color: rgb(7, 91, 154);
+                font-family: "Google Sans", Roboto, sans-serif;
+                font-size: 1rem;
+                position: relative;
+                text-align: center !important;;
+                padding: 1.25rem;
+                height: 600px;
+                
+            }
+
+            
+        }
+        
+    }
+}
+
+
+@media screen and (min-width:960px) {
+    .not-found {
+        display: flex;
+        flex-direction: column;
+        ng-lottie {
+            // flex: 50%;
+            // display: flex;
+            // flex-direction: column;
+            // align-self: center;
+            height: 300px;
+            width: 100%;
+        }
+        .banner-404 {
+            // flex: 50%;
+            display: flex;
+            flex-direction: column;
+            // align-self: flex-start;
+            justify-content: center;
+            background-color: rgb(255, 255, 255);
+            height: 500px;
+            // padding-top: 80px;
+            text-align: center !important;;
+            .title-404 {
+                
+                color: rgb(7, 91, 154);
+                font-family: "Google Sans", Roboto, sans-serif;
+                font-size: 2.50rem;
+                font-weight: 800;
+                position: relative;
+                text-align: center !important;
+                padding: 1.25rem;
+
+                
+            }
+
+            .body-404 {
+                color: rgb(7, 91, 154);
+                font-family: "Google Sans", Roboto, sans-serif;
+                font-size: 1rem;
+                position: relative;
+                text-align: center !important;
+                padding: 1.25rem;
+            }
+
+        }
+               
+        
+    }
+}

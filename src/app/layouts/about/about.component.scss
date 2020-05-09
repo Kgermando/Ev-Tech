@@ -1,0 +1,102 @@
+@media screen and (max-width:960px) {
+    .about {
+        height: 100%;
+        .about-img {
+            height: 200px;
+            width: 100%;  
+        }
+        .about-banner {
+              font-family: "Google Sans", Roboto, sans-serif;
+              position: relative;
+              text-align: center !important;;
+              padding: 1.25rem;
+      
+              .about-title {
+                font-size: 1.55rem;
+                font-weight: 800;
+                color: rgb(7, 91, 154);
+                padding-bottom: 1rem;
+          
+            }
+            .about-subtitle {
+                font-size: 1.25rem;
+            }
+        }  
+
+        .about-corps {
+            font-family: "Google Sans", Roboto, sans-serif;
+            font-size: 1rem;
+            position: relative;
+            text-align: center !important;;
+            // padding: 1.25rem;
+            margin-left: 1.25rem;
+            margin-right: 1.25rem;
+            margin-bottom: 1.50rem;
+        }
+
+        .sponsors {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                height: 80px;
+                width: 150px;
+            }
+        }
+    }
+}
+
+
+
+
+
+@media screen and (min-width:960px) {
+   .about {
+       height: 100%;
+        .about-img {
+            height: 200px;
+            width: 100%;  
+        }
+        .about-banner {
+            font-family: "Google Sans", Roboto, sans-serif;
+            position: relative;
+            text-align: center !important;;
+            padding: 1.25rem;
+
+            .about-title {
+                font-size: 2rem;
+                font-weight: 800;
+                color: rgb(7, 91, 154);
+                padding-bottom: 1rem;
+          
+            }
+            .about-subtitle {
+                font-size: 1.25rem;
+            }
+        }
+        .about-corps {
+            font-family: "Google Sans", Roboto, sans-serif;
+            font-size: 1rem;
+            position: relative;
+            text-align: center !important;;
+            padding: 1.25rem;
+            margin-top: 2rem;
+            margin-left: 2rem;
+            margin-right: 2rem;
+            margin-bottom: 2rem;
+            // height: 400px;
+        }
+
+        .sponsors {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                height: 80px;
+                width: 150px;
+            }
+        }
+    } 
+}

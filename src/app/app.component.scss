@@ -6,12 +6,6 @@
     display: flex;
   }
 
-  mat-toolbar-row{
-    padding: 0;
-    background-color: rgb(225, 250, 255);
-  }
-
-
   
   .menu-spacer {
       flex: 1 1 auto;
@@ -43,6 +37,12 @@
 
       .nav-1 :hover {
         color: #0E9BAF;
+      }
+
+      #contact {
+        background-color: #0E9BAF;
+        color: whitesmoke;
+        padding: 0.50rem;
       }
     
     

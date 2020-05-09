@@ -1,15 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {Component} from '@angular/core';
+import {MatDialog} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-snackbar',
   templateUrl: './snackbar.component.html',
-  styleUrls: ['./snackbar.component.scss']
+  // styleUrls: ['./snackbar.component.scss']
 })
-export class SnackbarComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-}
+export class SnackbarComponent {}

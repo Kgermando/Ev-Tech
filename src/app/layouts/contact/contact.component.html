@@ -1,1 +1,76 @@
-<p>contact works!</p>
+<div class="site-banner-contact">
+    Une assitance prête à vous servir.
+</div>
+<div class="contact">
+    
+    <div class="contact-1">
+        <div class="site-banner">
+            Une assitance prête à vous servir.
+        </div>
+        <ng-lottie [options]="options" (animationCreated)="animationCreated($event)"></ng-lottie>
+    </div>
+
+    <div class="contact-2">
+        <div class="contact-2-1">Contactez-Nous ici.</div>
+        <form class="example-form" [formGroup]="contactFG">
+            <mat-form-field class="example-full-width">
+                <mat-label>Prénom et Nom</mat-label>
+                <input matInput type="text" placeholder="Ex. Marie Annette" formControlName="FullName">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <mat-label>Telephone</mat-label>
+                <span matPrefix>+ &nbsp;</span>
+                <input type="tel" matInput formControlName="Telephone" placeholder="555-555-1234">
+            </mat-form-field>           
+
+            <mat-form-field class="example-full-width">
+              <mat-label>Email</mat-label>
+              <input type="email" matInput placeholder="Adresse Email" formControlName="Email"/>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <mat-label>Objet</mat-label>
+                <input matInput placeholder="Ex. Sujet" formControlName="Sujet">
+            </mat-form-field>
+            
+            <mat-form-field class="example-full-width">
+                <mat-label>Message</mat-label>
+                <textarea matInput placeholder="Ex. votre Message..." formControlName="Message"></textarea>
+            </mat-form-field>
+ 
+            <button mat-raised-button (click)="save()">Envoyez</button>
+        </form>
+
+        <hr>
+
+        <div class="contact-2-2">
+            <div class="contact-2-2-1">Cordonnées</div> 
+            <div>
+                <div class="contact-2-2-2">
+                    <mat-icon>call</mat-icon>
+                   +243 81 975 32 32
+                </div>
+                <div class="contact-2-2-2">
+                    <mat-icon>call</mat-icon>
+                    +243 81 975 32 32
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="contact-3">
+    <hr>
+    <div class="contact-3-1">Coordonnées</div> 
+    <div>
+        <div class="contact-3-2">
+            <mat-icon>call</mat-icon>
+           +243 81 975 32 32
+        </div>
+        <div class="contact-3-2">
+            <mat-icon>call</mat-icon>
+            +243 81 975 32 32
+        </div>
+    </div>
+</div>

@@ -1,6 +1,7 @@
 <mat-toolbar class="footer">
     <div class="footer-right">
-        <p> <a routerLink="">Team</a>  -
+        <p> 
+            <a routerLink="">Team</a>  -
             <a routerLink="">Recrutements</a>  -
             <a routerLink="">Formations</a> 
         </p>
@@ -26,6 +27,11 @@
         </p>
     </div>
     
+    <div class="terms-licence">
+        <p> 
+            <a mat-button (click)="openDialog()">Terms de Services</a>
+        </p>
+    </div>
 
     <div class="footer-left">
         <p>&copy; {{ toDay | date: 'yyyy' }} Eventdrc Technology</p>

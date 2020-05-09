@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AnimationItem } from 'lottie-web';
+import { AnimationOptions } from 'ngx-lottie';
 
 @Component({
   selector: 'app-not-found',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NotFoundComponent implements OnInit {
 
+  options: AnimationOptions = {
+    path: '../../../assets/lottie/404.json',
+  };
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  animationCreated(animationItem: AnimationItem): void {
+    console.log(animationItem);
   }
 
 }
