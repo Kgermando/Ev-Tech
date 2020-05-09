@@ -9,6 +9,4 @@ import { AuthService } from './auth/services/auth/auth.service';
 export class AppComponent {
   title = 'eventdrcTechnology';
 
-  constructor(public authService: AuthService) {}
-
 }

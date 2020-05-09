@@ -4,12 +4,13 @@ import { NotFoundComponent } from './shared/component/not-found/not-found.compon
 
 
 const routes: Routes = [
-  { path: 'layouts', loadChildren: () => import('../app/layouts/layouts.module').then(m => m.LayoutsModule)},
-  { path: 'auth', loadChildren: () => import('../app/auth/auth.module').then(m => m.AuthModule)},
+
+  { path: 'nav', loadChildren: () => import('../app/nav/nav.module').then(m => m.NavModule)},
   { path: 'admin', loadChildren: () => import('../app/admin/admin.module').then(m => m.AdminModule)},
 
-  { path: '', redirectTo: 'layouts', pathMatch: 'full'},
-  { path: '**', component: NotFoundComponent }
+
+  { path: '', redirectTo: 'nav', pathMatch: 'full'},
+
 ];
 
 @NgModule({
