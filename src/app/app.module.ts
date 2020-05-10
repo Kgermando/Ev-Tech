@@ -19,6 +19,7 @@ import { ErrorStateMatcher, ShowOnDirtyErrorStateMatcher } from '@angular/materi
 import { environment } from 'src/environments/environment';
 import { AuthService } from './auth/services/auth/auth.service';
 import { ProfileService } from './auth/services/auth/profile.service';
+import { MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material/snack-bar';
 
 
 // Note we need a separate function as it's required
@@ -48,6 +49,7 @@ export function playerFactory() {
   ],
   providers: [
               {provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher},
+              {provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: {duration: 2500}},
               AuthService,
               ProfileService
             ],

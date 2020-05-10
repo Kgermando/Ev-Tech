@@ -16,13 +16,12 @@
                 font-weight: 800;
                 color: rgb(7, 91, 154);
                 padding-bottom: 1rem;
-          
             }
             .about-subtitle {
                 font-size: 1.25rem;
             }
         }  
-
+ 
         .about-corps {
             font-family: "Google Sans", Roboto, sans-serif;
             font-size: 1rem;
@@ -32,6 +31,77 @@
             margin-left: 1.25rem;
             margin-right: 1.25rem;
             margin-bottom: 1.50rem;
+        }
+
+        .card-about {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+            align-items: center;
+            
+            .card-about-1 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 1.25rem;
+                max-width: 400px;
+                font-family: "Google Sans", Roboto, sans-serif;
+                font-size: 1rem;
+                position: relative;
+                text-align: center !important;
+                margin-right: 0.75rem;
+            margin-left: 0.75rem;
+
+                mat-icon {
+                    padding-top: 0.50rem;
+                    padding-bottom: 2rem;
+                    color: rgb(7, 91, 154);
+                    font-size: 44px;
+                }
+            }
+
+            .card-about-2 {  
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 1.25rem;
+                max-width: 400px;
+                font-family: "Google Sans", Roboto, sans-serif;
+                font-size: 1rem;
+                position: relative;
+                text-align: center !important;
+                margin-right: 0.75rem;
+            margin-left: 0.75rem;
+
+                mat-icon {
+                    padding-top: 0.50rem;
+                    padding-bottom: 2rem;
+                    color: rgb(7, 91, 154);
+                    font-size: 44px;
+                }
+            }
+
+            .card-about-3 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 1.25rem;
+                max-width: 400px;
+                font-family: "Google Sans", Roboto, sans-serif;
+                font-size: 1rem;
+                position: relative;
+                text-align: center !important;
+                margin-right: 0.75rem;
+                margin-left: 0.75rem;
+
+                mat-icon {
+                    padding-top: 0.50rem;
+                    padding-bottom: 2rem;
+                    color: rgb(7, 91, 154);
+                    font-size: 44px;
+                }
+            }
         }
 
         .sponsors {
@@ -86,6 +156,70 @@
             margin-right: 2rem;
             margin-bottom: 2rem;
             // height: 400px;
+        }
+
+        .card-about {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-right: 1.25rem;
+            
+            .card-about-1 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-left: 1.25rem;
+                max-width: 400px;
+                font-family: "Google Sans", Roboto, sans-serif;
+                font-size: 1rem;
+                position: relative;
+                text-align: center !important;;
+
+                mat-icon {
+                    padding-top: 0.50rem;
+                    padding-bottom: 2rem;
+                    color: rgb(7, 91, 154);
+                    font-size: 44px;
+                }
+            }
+
+            .card-about-2 {  
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-left: 1.25rem;
+                max-width: 400px;
+                font-family: "Google Sans", Roboto, sans-serif;
+                font-size: 1rem;
+                position: relative;
+                text-align: center !important;;
+
+                mat-icon {
+                    padding-top: 0.50rem;
+                    padding-bottom: 2rem;
+                    color: rgb(7, 91, 154);
+                    font-size: 44px;
+                }
+            }
+
+            .card-about-3 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-left: 1.25rem;
+                max-width: 400px;
+                font-family: "Google Sans", Roboto, sans-serif;
+                font-size: 1rem;
+                position: relative;
+                text-align: center !important;;
+
+                mat-icon {
+                    padding-top: 0.50rem;
+                    padding-bottom: 2rem;
+                    color: rgb(7, 91, 154);
+                    font-size: 44px;
+                }
+            }
         }
 
         .sponsors {

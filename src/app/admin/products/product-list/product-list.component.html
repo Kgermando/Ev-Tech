@@ -12,7 +12,7 @@
   
   <div fxLayout="column" class="example-container mat-elevation-z8">
     <mat-table #table [dataSource]="dataSource" matSort>
-      <!-- Position Column -->
+      <!-- Produit Column -->
       <ng-container matColumnDef="Title" sticky>
         <mat-header-cell *matHeaderCellDef mat-sort-header> Nom du Produit </mat-header-cell>
         <mat-cell *matCellDef="let element"> 
@@ -21,8 +21,8 @@
       </ng-container>
   
      
-      <!-- Weight Column -->
-      <ng-container matColumnDef="Created">
+      <!-- Date Column -->
+      <ng-container matColumnDef="Created" matSort>
         <mat-header-cell *matHeaderCellDef mat-sort-header> Date </mat-header-cell>
         <mat-cell *matCellDef="let element"> {{ element.Created.toDate()| date: 'dd/MM/yyyy HH:mm:ss' }} </mat-cell>
       </ng-container>

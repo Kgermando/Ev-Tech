@@ -4,7 +4,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { Router } from '@angular/router';
 import { Contact } from 'src/app/shared/models/contact';
 import { ContactService } from 'src/app/shared/services/data/contact.service';
-import { SpinnerService } from 'src/app/shared/services/data/spinner.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-contacts-ecrire',
@@ -23,7 +23,7 @@ export class ContactsEcrireComponent implements OnInit {
     Message: '',
     Created: null,
     Confirmation: ''
-  }
+  };
 
 loading = false;
 errorMessage = '';
@@ -33,7 +33,7 @@ errorMessage = '';
               private router: Router,
               private db: AngularFirestore,
               private contactService: ContactService,
-              private spinnerService: SpinnerService
+              private snackBar: MatSnackBar
               ) {
       this.contactFG = this.formBuilder.group({
         FullName: ['', Validators.required],
@@ -41,7 +41,7 @@ errorMessage = '';
         Email: ['', Validators.required],
         Sujet: ['', Validators.required],
         Message: ['', Validators.required]
-      })
+      });
   }
 
   ngOnInit(): void {}
@@ -51,13 +51,13 @@ errorMessage = '';
       this.loading = true;
       this.contact = this.contactFG.value;
       this.contact.id = this.db.createId();
-      this.contact.Confirmation = "NON LU";
+      this.contact.Confirmation = 'NON LU';
       this.contact.Created = new Date();
       this.contactService.add(this.contact).then(res => {
-        console.log(res)
+        console.log(res);
         this.loading = false;
         this.router.navigateByUrl('/admin/contacts/contacts-list');
-        this.openSuccessBar()
+        this.snackBar.open('Message Envoyé!');
         this.contactFG.reset();
       }).then((res => {
         console.log(res);
@@ -65,28 +65,8 @@ errorMessage = '';
       }));
     } else {
       this.markFormGroupTouched(this.contactFG);
-      this.openErrorBar(this.errorMessage)
+      this.snackBar.open('Message Erreur');
     }
-  }
-
-  openSuccessBar() {
-    this.spinnerService.openSnackBar({
-      data: { message: "Message envoyé avec succès" },
-      duration: 6,
-      panelClass: ["default-snackbar"],
-      horizontalPosition: "right",
-      verticalPosition: "top"
-    });
-  }
-
-  openErrorBar(errorMessage) {
-    this.spinnerService.openSnackBar({
-      data: { message: errorMessage },
-      duration: 2,
-      panelClass: ["default-snackbar"],
-      horizontalPosition: "right",
-      verticalPosition: "top"
-    });
   }
 
 

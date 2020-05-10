@@ -30,8 +30,8 @@ export class AdminHeaderComponent implements OnInit {
   }
 
   async signOut() {
-    await this.afAuth.signOut()
+    await this.afAuth.signOut();
     await localStorage.clear();
-    await this.router.navigateByUrl("/fastsmart/auth")
+    await this.router.navigateByUrl('/nav/auth');
   }
 }

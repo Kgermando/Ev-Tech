@@ -7,6 +7,7 @@ import { Product } from 'src/app/shared/models/product';
 import { finalize } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { AngularFireStorage, AngularFireUploadTask } from '@angular/fire/storage';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-product-edit',
@@ -34,7 +35,7 @@ export class ProductEditComponent implements OnInit {
               private route: ActivatedRoute,
               private storage: AngularFireStorage,
               private productService: ProductService,
-              private sharedService: SpinnerService) {
+              private snackBar: MatSnackBar) {
 
     }
 
@@ -64,24 +65,14 @@ export class ProductEditComponent implements OnInit {
       productImageUrl: this.getImageUrl(),
     };
     this.productService.updateProduct(this.product, this.productid);
-    this.showSnackbar();
+    this.snackBar.open('Message Envoyé!');
     this.router.navigate(['/admin/products/product-list']);
   }
 
-    showSnackbar() {
-      this.sharedService.openSnackBar({
-        duration: 1,
-        data: {
-          isAccepted: true,
-          message: 'Product Updated Successfully'
-        },
-        panelClass: [ 'recovery-snackbar' ]
-      });
-    }
 
   getImageUrl(){
-    if(this.imgDownloadUrl == null){
-      if(this.product.productImageUrl == null){
+    if (this.imgDownloadUrl == null){
+      if (this.product.productImageUrl == null){
       }
       else{
         return this.product.productImageUrl;

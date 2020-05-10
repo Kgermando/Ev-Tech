@@ -4,6 +4,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Contact } from 'src/app/shared/models/contact';
 import { ContactService } from 'src/app/shared/services/data/contact.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-contacts-edit',
@@ -32,7 +33,8 @@ export class ContactsEditComponent implements OnInit {
   constructor(private formBuilder: FormBuilder,
               private router: Router,
               private route: ActivatedRoute,
-              private contactService: ContactService
+              private contactService: ContactService,
+              private snackBar: MatSnackBar
               ) {
       this.contactFG = this.formBuilder.group({
         id: ['', Validators.required],
@@ -50,9 +52,9 @@ export class ContactsEditComponent implements OnInit {
     this.getFiche(id);
 
       // For Vue detail TItle Nom du patient
-      this.getDetails(id);
+    this.getDetails(id);
     }
-  
+
   // Vue detail pour fiche Title
     getDetails(id: string): void {
       this.contactService.getOneContact(id).subscribe(fi => {
@@ -95,11 +97,12 @@ export class ContactsEditComponent implements OnInit {
     if (this.contactFG.valid) {
       // this.loading = true;
       this.setFicheData(this.contactFG.value);
-      this.contact.Confirmation = "NON LU"
+      this.contact.Confirmation = 'NON LU';
       this.contactService.update(this.updateFiche).then(res => {
         this.loading = false;
         this.router.navigateByUrl('/admin/contacts/contacts-list');
         console.log('Contact Mis à jour!');
+        this.snackBar.open('Message Envoyé!');
       }).then((res => {
         console.log(res);
         console.log('Contact enregistrée!');

@@ -3,10 +3,10 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Product } from 'src/app/shared/models/product';
 import { Router } from '@angular/router';
 import { ProductService } from 'src/app/shared/services/data/product.service';
-import { SpinnerService } from 'src/app/shared/services/data/spinner.service';
 import { Observable } from 'rxjs';
 import { finalize } from 'rxjs/operators';
 import { AngularFireStorage, AngularFireUploadTask } from '@angular/fire/storage';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-product-add',
@@ -32,7 +32,7 @@ export class ProductAddComponent implements OnInit {
               private router: Router,
               private storage: AngularFireStorage,
               private productService: ProductService,
-              private sharedService: SpinnerService) {
+              private snackBar: MatSnackBar) {
               }
 
   ngOnInit(): void {
@@ -62,20 +62,10 @@ export class ProductAddComponent implements OnInit {
       productImageUrl: this.imgDownloadUrl,
     };
     this.productService.createProduct(this.product);
-    this.showSnackbar();
+    this.snackBar.open('Message Envoyé!');
     this.router.navigate(['/admin/products/product-list']);
   }
 
-    showSnackbar() {
-      this.sharedService.openSnackBar({
-        duration: 1,
-        data: {
-          isAccepted: true,
-          message: 'Product Created Successfully'
-        },
-        panelClass: [ 'recovery-snackbar' ]
-      });
-    }
 
   // Main task
   task: AngularFireUploadTask;

@@ -4,7 +4,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { Router } from '@angular/router';
 import { Contact } from 'src/app/shared/models/contact';
 import { ContactService } from 'src/app/shared/services/data/contact.service';
-import { SpinnerService } from 'src/app/shared/services/data/spinner.service';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 import { AnimationItem } from 'lottie-web';
 import { AnimationOptions } from 'ngx-lottie';
@@ -35,13 +35,15 @@ export class ContactComponent implements OnInit {
 
 loading = false;
 errorMessage = '';
+message = 'Message envoyé!';
+action = 'Success';
 
 
   constructor(private formBuilder: FormBuilder,
               private router: Router,
               private db: AngularFirestore,
               private contactService: ContactService,
-              private spinnerService: SpinnerService
+              private snackBar: MatSnackBar
               ) {
       this.contactFG = this.formBuilder.group({
         FullName: ['', Validators.required],
@@ -64,8 +66,8 @@ errorMessage = '';
       this.contactService.add(this.contact).then(res => {
         console.log(res);
         this.loading = false;
-        this.router.navigateByUrl('/layouts/contact');
-        this.openSuccessBar();
+        this.router.navigateByUrl('/nav/layouts/contact');
+        this.snackBar.open('Message Envoyé!');
         this.contactFG.reset();
       }).then((res => {
         console.log(res);
@@ -73,30 +75,9 @@ errorMessage = '';
       }));
     } else {
       this.markFormGroupTouched(this.contactFG);
-      this.openErrorBar(this.errorMessage);
+      this.snackBar.open('Message Erreur');
     }
   }
-
-  openSuccessBar() {
-    this.spinnerService.openSnackBar({
-      data: { message: 'Message envoyé avec succès' },
-      duration: 6,
-      panelClass: ['default-snackbar'],
-      horizontalPosition: 'right',
-      verticalPosition: 'top'
-    });
-  }
-
-  openErrorBar(errorMessage) {
-    this.spinnerService.openSnackBar({
-      data: { message: errorMessage },
-      duration: 6,
-      panelClass: ['default-snackbar'],
-      horizontalPosition: 'right',
-      verticalPosition: 'top'
-    });
-  }
-
 
   FullNameValidate() {
     const control = this.contactFG.get('FullName');
