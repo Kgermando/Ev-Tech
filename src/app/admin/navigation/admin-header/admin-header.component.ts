@@ -12,6 +12,7 @@ export class AdminHeaderComponent implements OnInit {
 
   @Output() toggleSideBarForMe: EventEmitter<any> = new EventEmitter();
 
+
   constructor(
     private afAuth: AngularFireAuth,
     private router: Router,

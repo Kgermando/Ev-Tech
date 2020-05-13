@@ -1,17 +1,17 @@
-<mat-toolbar color="accent" class="mat-elevation-z10">
+<mat-toolbar color="accent" class="mat-elevation-z6 sidenav-container" [style.margin-bottom]="'10px'">
     <mat-toolbar-row>
         <button mat-icon-button (click)="toggleSideBar()">
             <mat-icon>menu</mat-icon>
         </button>
 
-        <a routerLink="/fastsmart/layouts" mat-button matTooltip="Fast Smart">
-            <img src="../assets/img/logo.png" alt="logo fast smart">
-          </a>
+        <a routerLink="/nav/layouts" mat-button matTooltip="Eventdrc Technology">
+            <img src="../assets/img/logo.png" alt="logo Eventdrc Technology">
+        </a>
 
         <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
             <ul fxLayout="row" fxLayoutGap="20px">
                 <li>
-                    <button mat-icon-button routerLink="/fastsmart/layouts/home">
+                    <button mat-icon-button routerLink="/nav/layouts/home">
                         <mat-icon>home</mat-icon>
                     </button>
                 </li>

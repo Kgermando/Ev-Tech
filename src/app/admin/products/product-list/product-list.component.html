@@ -24,7 +24,7 @@
       <!-- Date Column -->
       <ng-container matColumnDef="Created" matSort>
         <mat-header-cell *matHeaderCellDef mat-sort-header> Date </mat-header-cell>
-        <mat-cell *matCellDef="let element"> {{ element.Created.toDate()| date: 'dd/MM/yyyy HH:mm:ss' }} </mat-cell>
+        <mat-cell *matCellDef="let element"> {{ element.Created*1000 | date: 'dd/MM/yyyy HH:mm:ss' }} </mat-cell>
       </ng-container>
 
       <ng-container matColumnDef="edit">

@@ -3,7 +3,9 @@
   mat-toolbar {
     background-color: white;
     position: relative;
-    display: flex;
+    top: 0;
+    // margin-bottom: 6px;
+    z-index: 10;
   }
 
   
