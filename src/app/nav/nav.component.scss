@@ -2,7 +2,7 @@
 
   mat-toolbar {
     background-color: white;
-    position: relative;
+    position: sticky;
     top: 0;
     // margin-bottom: 6px;
     z-index: 10;
@@ -12,48 +12,52 @@
   .menu-spacer {
       flex: 1 1 auto;
     }
+  
+  mat-sidenav {
+    width: 60%;
+  }
     
-    mat-nav-list {
-      a {
-        mat-icon {
-          padding-right: 5px;
-        }
+  mat-nav-list {
+    a {
+      mat-icon {
+        padding-right: 10px;
       }
     }
+  }
     
-    .active-link{
-      color: #0E9BAF;
-      text-decoration-line: underline;
-      padding-bottom: 5px;
-      }
+  .active-link{
+    color: #0E9BAF;
+    text-decoration-line: underline;
+    padding-bottom: 5px;
+  }
     
-      img {
-        width: 150px; 
-        height: 50px;
-      }
-    
-      a :hover {
-        text-decoration: none;
-        color: #0E9BAF;
-      }
+  img {
+    width: 150px; 
+    height: 50px;
+  }
 
-      .nav-1 :hover {
-        color: #0E9BAF;
-      }
+  a :hover {
+    text-decoration: none;
+    color: #0E9BAF;
+  }
 
-      #contact {
-        background-color: #0E9BAF;
-        color: whitesmoke;
-        padding: 0.50rem;
-      }
+  .nav-1 :hover {
+    color: #0E9BAF;
+  }
+
+  #contact {
+    background-color: #0E9BAF;
+    color: whitesmoke;
+    padding: 0.50rem;
+  }
     
     
-      @media screen and (max-width: 360px) {
-        mat-toolbar {
-          padding-left: 2px;
-        }
-        img {
-          width: 110px; 
-          height: 50px;
-        }
-      }
+  @media screen and (max-width: 360px) {
+    mat-toolbar {
+      padding-left: 2px;
+    }
+    img {
+      width: 110px; 
+      height: 50px;
+    }
+  }
