@@ -9,22 +9,21 @@ import { AngularFireAuth } from '@angular/fire/auth';
 })
 export class AuthGuard implements CanActivate {
 
-  constructor(private af: AngularFireAuth, private router:Router){}
+  constructor(private af: AngularFireAuth, private router: Router){}
 
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-      return new Observable(observer=>{
-        this.af.authState.subscribe(res=>{
-          if(res){
+      return new Observable(observer => {
+        this.af.authState.subscribe(res => {
+          if (res){
             observer.next(true);
           }
-          else if(!res){
+          else if (!res){
             observer.next(false);
-            this.router.navigate(['/fastsmart/layouts']);
+            this.router.navigate(['/nav/auth']);
           }
-        })
-      })
+        });
+      });
   }
-  
 }

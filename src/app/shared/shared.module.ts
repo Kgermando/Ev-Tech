@@ -53,6 +53,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 // Pipes
 import { SmartPipe } from './services/pipes/smart.pipe';
 
+import {NgxPaginationModule} from 'ngx-pagination';
+
 // Packages
 import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
@@ -122,6 +124,8 @@ export function playerFactory() {
     ReactiveFormsModule,
     HttpClientModule,
 
+    NgxPaginationModule,
+
     LottieModule.forRoot({ player: playerFactory })
 
   ],
@@ -174,6 +178,7 @@ export function playerFactory() {
     FormsModule,
     ReactiveFormsModule,
 
+    NgxPaginationModule,
 
     // Pipes
     SmartPipe,

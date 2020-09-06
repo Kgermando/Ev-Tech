@@ -9,7 +9,11 @@ import { isNgTemplate } from '@angular/compiler';
 })
 export class PresentationComponent implements OnInit {
 
+  p = 1;
+
   products$;
+
+  loading = false;
 
   constructor(private productService: ProductService) { }
 
@@ -18,8 +22,11 @@ export class PresentationComponent implements OnInit {
   }
 
   getProducts() {
+    this.loading = true;
     this.productService.getCollection$().subscribe(products => {
+      this.loading = true;
       this.products$ = products;
+      this.loading = false;
     });
   }
 
